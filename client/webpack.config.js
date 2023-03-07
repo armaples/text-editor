@@ -2,7 +2,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
-const { InjectManifest, GenerateSW } = require('workbox-webpack-plugin');
+const { InjectManifest } = require('workbox-webpack-plugin');
 
 // TODO: Add and configure workbox plugins for a service worker and manifest file.
 // TODO: Add CSS loaders and babel to webpack.
@@ -12,7 +12,10 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
+      database: './src/js/database.js',
+      editor: './src/js/database.js',
+      header: './src/js/header.js'
     },
     output: {
       filename: '[name].bundle.js',
@@ -23,7 +26,6 @@ module.exports = () => {
         template: './index.html',
         title: 'JATE'
        }),
-       new GenerateSW(),
        new WebpackPwaManifest({
         filename: "manifest.json",
         name: "JATE",
@@ -35,14 +37,14 @@ module.exports = () => {
         publicPath: './',
         icons: [
           {
-            src: path.resolve('/src/images/logo.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
-            destination: path.join('assets', 'icons'),
+            destination: path.join('src', 'icons'),
           },
         ],
       }),
       new InjectManifest({
-        swSrc: './src/sw.js',
+        swSrc: './src-sw.js',
         swDest: 'service-worker.js',
       }),
       new MiniCssExtractPlugin(),
