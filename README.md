@@ -6,6 +6,7 @@ This app is a basic text editor that uses webpack. The user can easily install t
 ## Table of Contents
 - [Installation](#installation)
 - [Application Preview](#application-previous)
+- [Deployed Application](#deployed-application)
 - [Credits](#credits)
 - [MIT License](#mit-license)
 
