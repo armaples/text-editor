@@ -41,7 +41,7 @@ export const getDb = async () => {
 	const request = store.get(1);
 	const result = await request;
   	console.log("Data Retrieved!", result)
-	// returns only the value of the result (not the id!). ? helps in case the value is undefined
+	// returns only the value of the result (not the id!). ? helps in case the result is undefined
 	return result?.value;
 };
 
