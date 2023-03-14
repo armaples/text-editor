@@ -7,7 +7,6 @@ This app is a basic text editor that uses webpack. The user can easily install t
 - [Installation](#installation)
 - [Application Preview](#application-previous)
 - [Deployed Application](#deployed-application)
-- [Credits](#credits)
 - [MIT License](#mit-license)
 
 ## Installation
@@ -22,9 +21,6 @@ When data is stored, it will display automatically when coming back to the page 
 
 ## Deployed Application
 [Click here to see the deployed application.](https://shrouded-journey-03662.herokuapp.com/)
-
-## Credits
-Had some minor issues retrieving the data and having it display on the page. I did have to get help by comparing my code to other code where people were retrieving data using indexedDB, and [this](https://dev.to/pandresdev/get-data-from-indexeddb-7hg) was one page that helped me understand what was missing. The main issue was using `result` instead of `result.value`, the former of which would return an error.
 
 ## MIT License
 Distributed under the MIT License. Please follow [this link](https://opensource.org/licenses/MIT) for more information, or click on the badge at the top.
