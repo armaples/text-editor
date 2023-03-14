@@ -1,5 +1,6 @@
 import { openDB } from 'idb';
 
+// Initializes indexedDB
 const initdb = async () =>
   openDB('jate', 1, {
     upgrade(db) {
@@ -12,9 +13,7 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
-
-// Updating the data with indexDB
+// Updating the data with indexedDB
 export const putDb = async (content) => {
   	console.log("Updating data...")
 	const jateDB = await openDB('jate', 1);
@@ -25,7 +24,7 @@ export const putDb = async (content) => {
 	console.log("Data updated!", result);
 };
 
-// Retrieving the data with indexDB
+// Retrieving the data with indexedDB
 export const getDb = async () => {
   	console.log("Retrieving data...")
 	const jateDb = await openDB('jate', 1);
