@@ -12,12 +12,14 @@ This app is a basic text editor that uses webpack. The user can easily install t
 ## Installation
 Navigate to the deployed application (link below) and click "Install" to install the application for offline usage. 
   
-## Deployed Application
+## Application Preview
 ![Preview](./images/appPreview1.png)
 Above is what the app looks like before any data is stored. 
 
 ![Preview](./images/appPreview2.png)
 When data is stored, it will display automatically when coming back to the page based on the last save. 
+
+## Deployed Application
 [Click here to see the deployed application.](https://shrouded-journey-03662.herokuapp.com/)
 
 ## Credits
